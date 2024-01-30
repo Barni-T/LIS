@@ -134,7 +134,6 @@ img{
     width: 10vw;
     height: 25vh;
     float: right;
-    transform: translateY(-5vh);
     border: 2px solid black;
     border-radius: 10px;
     transition: 0.3s;
