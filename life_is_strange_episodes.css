@@ -1,0 +1,214 @@
+body{
+    background-image: linear-gradient(to right, #c2ab9d, #f0d6c8)
+}
+:root{
+    --header: #f5ebe0;
+}
+.grid{
+    display: grid;
+    grid-template-areas: 
+    'h h h h h h h '
+    'h h h h h h h '
+    'm m c c c c c'
+    'm m c c c c c'
+    'm m c c c c c'
+    'm m c c c c c'
+    'm m c c c c c'
+    'm m c c c c c'
+    'm m c c c c c'
+    'm m c c c c c';
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    width: 100%;
+    margin: auto;
+}
+.menu{
+    grid-area: m;
+    background-color: #d5bdaf;
+    display: flex;
+    width: 28vw;
+    height: 100%;
+    flex-flow: column nowrap;
+    align-items : center;
+    align-content: space-evenly;
+    justify-content: space-around;
+}
+.header{
+    grid-area: h;
+    background-image: url(header.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Indie Flower', cursive;
+    font-size: 0rem;
+    color: var(--header);
+    text-align: center;
+    line-height: 25.5vh;
+    animation-name: header;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes header {
+    from{font-size: 0rem;}
+    to{font-size: 2.5rem;}
+}
+.content{
+    grid-area: c;
+    background-color: #edede9;
+    font-family: 'Source Code Pro', monospace;
+    height: 100%;
+}
+.content p{
+    height: auto;
+}
+p{
+    height: 5vh;
+    font-size: 1rem;
+}
+p{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+h1{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-style: italic;
+    font-size: 1rem;
+}
+.navbar{
+    position: relative;
+    font-size: 3rem;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+.navbar_content{
+    position: relative;
+    display: none;
+    padding-left: 3rem;
+}
+.navbar_content a{
+    text-decoration: none;
+    color: var(--header);
+    font-size: 3rem;
+    text-align: center;
+    transition: 0.5s;
+}
+.navbar_content a:hover{
+    font-size: 3.1rem;
+    color: black;
+}
+.navbar:hover .navbar_content{
+    display: block;
+}
+.link{
+    padding-top: 0.5rem;
+    padding-bottom:0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: #e3d5ca;
+    font-weight: bold;
+    border-radius: 10px ;
+    font-size: 3rem;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    margin: 1rem;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+.link:hover{
+    font-size: 3.3rem;
+}
+span{
+    padding-top: 0.5rem;
+    padding-bottom:0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: #e3d5ca;
+    font-weight: bold;
+    border-radius: 10px ;
+}
+.footer{
+    text-align: right;
+    font-style: italic;
+    transform: translateY(0vh);
+}
+.sticky{
+    position: sticky;
+    top: 0px;
+    text-shadow: 3px 3px 5px black;
+}
+ul{
+    list-style: none;
+}
+@media (max-height:650px){
+    h1{
+        font-size: 0.8rem;
+    }
+    .content p{
+        font-size: 1rem;
+        height: auto;
+    }
+    .navbar_content{
+        padding-left: 0rem;
+    }
+    .navbar_content a{
+        font-size: 3rem;
+    }
+    .navbar_content a:hover{
+        font-size: 3.1rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .menu{
+        height: 100%;
+    }
+    .content{
+        height: 100%;
+    }
+    .footer{
+        transform: translateY(0vh);
+        font-size: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .header{
+        background-size: 100%;
+    }
+    span{
+        font-size: 1.2rem;
+    }
+    .link{
+        font-size: 1.2rem;
+    }
+    .link:hover{
+        font-size: 1.4rem;
+    }
+    .navbar_content a{
+        font-size: 1.2rem;
+    }
+    .navbar_content a:hover{
+        font-size: 1.3rem;
+    }
+    .navbar_content{
+        padding-left: 0rem;
+    }
+    h1{
+        font-size: 1.2rem;
+    }
+    .content p{
+        font-size: 1rem;
+        height: auto;
+    }
+    .menu{
+        height: 100%;
+    }
+    .content{
+        height: 100%;
+    }
+    .sticky{
+        font-size: 2rem;
+    }
+}
