@@ -84,6 +84,7 @@ h1{
     color: var(--header);
     font-size: 3rem;
     text-align: center;
+    transition: 0.5s;
 }
 .navbar_content a:hover{
     font-size: 3.1rem;
