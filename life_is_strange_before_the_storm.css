@@ -81,13 +81,13 @@ h1{
     position: relative;
     display: none;
     padding-left: 3rem;
+    transition: 0.5s;
 }
 .navbar_content a{
     text-decoration: none;
     color: black;
     font-size: 3rem;
     text-align: center;
-    transition: 0.5s;
 }
 .navbar_content a:hover{
     font-size: 3.1rem;
