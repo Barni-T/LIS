@@ -78,6 +78,7 @@ h1{
     position: relative;
     display: none;
     padding-left: 3rem;
+    transition: 0.5s;
 }
 .navbar_content a{
     text-decoration: none;
