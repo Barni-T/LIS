@@ -143,6 +143,9 @@ span{
 ul{
     list-style: none;
 }
+li{
+    padding-left: 0px;
+}
 @media (max-height:650px){
     h1{
         font-size: 0.8rem;
